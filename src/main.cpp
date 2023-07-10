@@ -80,11 +80,11 @@
 #define LLL 444
 
 // WiFi configs
-const char* ssid = "FAMILIA MEDEIROS";
-const char* password = "sl23jo316";
+const char* ssid = "NetId";
+const char* password = "NetPass";
 
 // MQTT Config
-const char *mqtt_broker = "10.0.0.105";
+const char *mqtt_broker = "MQTTIP";
 const char *topic = "MPU/Keyboard";
 const char *mqtt_username = "";
 const char *mqtt_password = "";
