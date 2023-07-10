@@ -27,9 +27,9 @@ void MPU::initialize()
     changeRegister(PWR_MGMT_2_REGISTER, 0b00000000);
 }
 
-void MPU::initialize(char  sclPin, char  sdaPin)
+void MPU::initialize(char  sdaPin, char  sclPin)
 {
-    Wire.begin(sclPin, sdaPin);
+    Wire.begin(sdaPin, sclPin);
 
     changeRegister(PWR_MGMT_1_REGISTER, 0b00000000);
     changeRegister(PWR_MGMT_2_REGISTER, 0b00000000);

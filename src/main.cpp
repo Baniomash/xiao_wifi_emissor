@@ -3,9 +3,9 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
-#define INTERRUPTION_PIN 5 // D3
-#define SCL_PIN 2 // D0
-#define SDA_PIN 3 // D1
+#define INTERRUPTION_PIN 21 // D6
+#define SDA_PIN 6 // D4
+#define SCL_PIN 7 // D5
 
 #define NEUTRAL 0
 #define UP 1
@@ -80,11 +80,11 @@
 #define LLL 444
 
 // WiFi configs
-const char* ssid = "Network_ID";
-const char* password = "Network_Pass";
+const char* ssid = "FAMILIA MEDEIROS";
+const char* password = "sl23jo316";
 
 // MQTT Config
-const char *mqtt_broker = "MQTT_IP";
+const char *mqtt_broker = "10.0.0.105";
 const char *topic = "MPU/Keyboard";
 const char *mqtt_username = "";
 const char *mqtt_password = "";
@@ -245,7 +245,7 @@ void setup()
   pinMode(INTERRUPTION_PIN, INPUT);
   
 
-  motionSensor.initialize(SCL_PIN, SDA_PIN);
+  motionSensor.initialize(SDA_PIN, SCL_PIN);
 
   motionSensor.disableTemperature();
   motionSensor.disableGyroscope();
